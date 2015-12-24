@@ -3,6 +3,7 @@
 
 import socket
 import select
+import time
 from PyQt4 import QtCore, QtGui, uic
 
 class ChatServer():
@@ -71,12 +72,12 @@ class ChatServer():
           # 接受数据
           data = csock.recv(1024)
           # 打印数据
-          self.print_to_textBrower( host + ' ' + str(port) + ' > ' + data)
+          self.print_to_textBrower( time.ctime() + '\n' + host + ' ' + str(port) + ' > ' + data + '\n')
           # 循环查找目的主机
           for cs in self.outputs:
             # 如果不是发送主机，则向其发送该主机发送的内容
             if cs != csock:
-                clientText =  host + ' ' + str(port) + ' : ' + data
+                clientText =  time.ctime() + '\n' + host + ' ' + str(port) + ' : ' + data + '\n'
                 cs.send(clientText)
 
         except socket.error,e:
