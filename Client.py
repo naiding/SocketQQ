@@ -6,8 +6,6 @@ from time import ctime
 import select
 import sys
 
-BUFSIZ = 1024
-
 class ChatClient():
 
     def __init__(self, host = 'localhost', port = 8888, textBrower = None):
@@ -16,7 +14,7 @@ class ChatClient():
         self.host = host
         self.port = port
 
-    def pring_to_brower(self, text):      
+    def print_to_brower(self, text):      
         self.textBrower.append(text)
 
     def run(self):
@@ -32,9 +30,9 @@ class ChatClient():
 
     def receive_message(self):
         while True:
-            data = self.client.recv(BUFSIZ)
+            data = self.client.recv(1024)
             if data:
-                self.pring_to_brower(data)
+                self.print_to_brower(data)
                 print data
 
 

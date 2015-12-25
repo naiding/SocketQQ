@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>578</width>
-    <height>594</height>
+    <width>675</width>
+    <height>585</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,7 +17,7 @@
    <widget class="QPushButton" name="bindButton">
     <property name="geometry">
      <rect>
-      <x>360</x>
+      <x>440</x>
       <y>20</y>
       <width>91</width>
       <height>31</height>
@@ -56,7 +56,7 @@
    <widget class="QPushButton" name="closeButton">
     <property name="geometry">
      <rect>
-      <x>470</x>
+      <x>550</x>
       <y>20</y>
       <width>91</width>
       <height>31</height>
@@ -99,14 +99,40 @@
      </rect>
     </property>
    </widget>
-   <widget class="QTextBrowser" name="logBrower">
+   <widget class="QTextBrowser" name="logBrowser">
     <property name="geometry">
      <rect>
       <x>20</x>
       <y>90</y>
-      <width>541</width>
-      <height>461</height>
+      <width>361</width>
+      <height>451</height>
      </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>60</y>
+      <width>51</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Online</string>
+    </property>
+   </widget>
+   <widget class="QTextBrowser" name="onlineBrowser">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>90</y>
+      <width>261</width>
+      <height>451</height>
+     </rect>
+    </property>
+    <property name="readOnly">
+     <bool>false</bool>
     </property>
    </widget>
   </widget>
@@ -115,7 +141,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>578</width>
+     <width>675</width>
      <height>21</height>
     </rect>
    </property>
